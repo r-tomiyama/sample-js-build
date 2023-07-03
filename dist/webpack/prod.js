@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log(100),console.log(void[1,2,3].flatMap((function(o){return[o,o+1]})))})();
