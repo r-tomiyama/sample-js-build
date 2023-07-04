@@ -9,6 +9,28 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./functions.ts":
+/*!**********************!*\
+  !*** ./functions.ts ***!
+  \**********************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   fn: function() { return /* binding */ fn; },\n/* harmony export */   increment: function() { return /* binding */ increment; }\n/* harmony export */ });\n/* harmony import */ var core_js_modules_es_array_flat_map_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.flat-map.js */ \"./node_modules/core-js/modules/es.array.flat-map.js\");\n/* harmony import */ var core_js_modules_es_array_flat_map_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_flat_map_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var core_js_modules_es_array_unscopables_flat_map_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.unscopables.flat-map.js */ \"./node_modules/core-js/modules/es.array.unscopables.flat-map.js\");\n/* harmony import */ var core_js_modules_es_array_unscopables_flat_map_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_unscopables_flat_map_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ \"./node_modules/core-js/modules/es.object.to-string.js\");\n/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\nfunction increment(num) {\n  return num + 1;\n}\nvar fn = function fn(ary) {\n  ary.flatMap(function (n) {\n    return [n, n + 1];\n  });\n};\n\n//# sourceURL=webpack://sample-node/./functions.ts?");
+
+/***/ }),
+
+/***/ "./index.ts":
+/*!******************!*\
+  !*** ./index.ts ***!
+  \******************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var core_js_actual_array_flat_map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/actual/array/flat-map */ \"./node_modules/core-js/actual/array/flat-map.js\");\n/* harmony import */ var core_js_actual_array_flat_map__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_actual_array_flat_map__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions */ \"./functions.ts\");\n\n\nconsole.log((0,_functions__WEBPACK_IMPORTED_MODULE_1__.increment)(99));\nconsole.log((0,_functions__WEBPACK_IMPORTED_MODULE_1__.fn)([1, 2, 3]));\n\n//# sourceURL=webpack://sample-node/./index.ts?");
+
+/***/ }),
+
 /***/ "./node_modules/core-js/actual/array/flat-map.js":
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/actual/array/flat-map.js ***!
@@ -641,6 +663,17 @@ eval("\nvar $propertyIsEnumerable = {}.propertyIsEnumerable;\n// eslint-disable-
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/object-to-string.js":
+/*!************************************************************!*\
+  !*** ./node_modules/core-js/internals/object-to-string.js ***!
+  \************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("\nvar TO_STRING_TAG_SUPPORT = __webpack_require__(/*! ../internals/to-string-tag-support */ \"./node_modules/core-js/internals/to-string-tag-support.js\");\nvar classof = __webpack_require__(/*! ../internals/classof */ \"./node_modules/core-js/internals/classof.js\");\n\n// `Object.prototype.toString` method implementation\n// https://tc39.es/ecma262/#sec-object.prototype.tostring\nmodule.exports = TO_STRING_TAG_SUPPORT ? {}.toString : function toString() {\n  return '[object ' + classof(this) + ']';\n};\n\n\n//# sourceURL=webpack://sample-node/./node_modules/core-js/internals/object-to-string.js?");
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/ordinary-to-primitive.js":
 /*!*****************************************************************!*\
   !*** ./node_modules/core-js/internals/ordinary-to-primitive.js ***!
@@ -872,6 +905,16 @@ eval("// this method was added to unscopables after implementation\n// in popula
 
 /***/ }),
 
+/***/ "./node_modules/core-js/modules/es.object.to-string.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/core-js/modules/es.object.to-string.js ***!
+  \*************************************************************/
+/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+
+eval("var TO_STRING_TAG_SUPPORT = __webpack_require__(/*! ../internals/to-string-tag-support */ \"./node_modules/core-js/internals/to-string-tag-support.js\");\nvar defineBuiltIn = __webpack_require__(/*! ../internals/define-built-in */ \"./node_modules/core-js/internals/define-built-in.js\");\nvar toString = __webpack_require__(/*! ../internals/object-to-string */ \"./node_modules/core-js/internals/object-to-string.js\");\n\n// `Object.prototype.toString` method\n// https://tc39.es/ecma262/#sec-object.prototype.tostring\nif (!TO_STRING_TAG_SUPPORT) {\n  defineBuiltIn(Object.prototype, 'toString', toString, { unsafe: true });\n}\n\n\n//# sourceURL=webpack://sample-node/./node_modules/core-js/modules/es.object.to-string.js?");
+
+/***/ }),
+
 /***/ "./node_modules/core-js/stable/array/flat-map.js":
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/stable/array/flat-map.js ***!
@@ -879,28 +922,6 @@ eval("// this method was added to unscopables after implementation\n// in popula
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 eval("var parent = __webpack_require__(/*! ../../es/array/flat-map */ \"./node_modules/core-js/es/array/flat-map.js\");\n\nmodule.exports = parent;\n\n\n//# sourceURL=webpack://sample-node/./node_modules/core-js/stable/array/flat-map.js?");
-
-/***/ }),
-
-/***/ "./functions.ts":
-/*!**********************!*\
-  !*** ./functions.ts ***!
-  \**********************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   fn: function() { return /* binding */ fn; },\n/* harmony export */   increment: function() { return /* binding */ increment; }\n/* harmony export */ });\nfunction increment(num) {\n    return num + 1;\n}\nvar fn = function (ary) {\n    ary.flatMap(function (n) { return [n, n + 1]; });\n};\n\n\n//# sourceURL=webpack://sample-node/./functions.ts?");
-
-/***/ }),
-
-/***/ "./index.ts":
-/*!******************!*\
-  !*** ./index.ts ***!
-  \******************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var core_js_actual_array_flat_map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/actual/array/flat-map */ \"./node_modules/core-js/actual/array/flat-map.js\");\n/* harmony import */ var core_js_actual_array_flat_map__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_actual_array_flat_map__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions */ \"./functions.ts\");\n\n\nconsole.log((0,_functions__WEBPACK_IMPORTED_MODULE_1__.increment)(99));\nconsole.log((0,_functions__WEBPACK_IMPORTED_MODULE_1__.fn)([1, 2, 3]));\n\n\n//# sourceURL=webpack://sample-node/./index.ts?");
 
 /***/ })
 
